@@ -4,12 +4,12 @@ export function ContactList(props) {
     <div>
       <ul>
         {props.allContacts.map(i => (
-          <li className={css.item} key={i.id}>
+          <li className={css.item} key={i.name}>
             {i.name}: {i.number}
             <button
               className={css.btn}
               type="button"
-              onClick={() => props.delete(i.id)}
+              onClick={() => props.delete(i.name)}
             >
               Delete
             </button>
